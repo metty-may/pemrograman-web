@@ -1,0 +1,212 @@
+:root {
+    color-scheme: light;
+    --ink: #203b35;
+    --muted: #5e7069;
+    --paper: #f7f6ef;
+    --green: #dce9d8;
+    --accent: #bd513b;
+    --line: #d8ded3;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+.site-header {
+    min-height: 76px;
+    padding: 0 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--line);
+}
+
+.brand {
+    color: var(--ink);
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--ink);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.intro {
+    min-height: 490px;
+    padding: 84px 12% 64px;
+    background-color: var(--green);
+    background-image: radial-gradient(#78917b 0.8px, transparent 0.8px);
+    background-position: right 8% top 28px;
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+}
+
+.eyebrow {
+    margin: 0 0 16px;
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.intro h1 {
+    max-width: 760px;
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: clamp(42px, 6vw, 76px);
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+.intro h1 span {
+    color: var(--accent);
+    font-style: italic;
+}
+
+.intro-copy {
+    max-width: 510px;
+    margin: 22px 0 28px;
+    color: var(--muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.intro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 22px;
+    padding: 13px 18px;
+    background: var(--ink);
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.intro-link:hover {
+    background: var(--accent);
+}
+
+.intro-link span {
+    font-size: 20px;
+}
+
+.intro-note {
+    margin-top: 30px;
+    color: var(--muted);
+    font-family: Georgia, serif;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.tutorials {
+    padding: 70px 8% 90px;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-family: Georgia, serif;
+    font-size: 36px;
+    font-weight: 400;
+}
+
+.tutorial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tutorial-item {
+    padding: 24px;
+    border: 1px solid var(--line);
+    background: #fffefa;
+}
+
+.item-number {
+    margin: 0 0 20px;
+    color: var(--accent);
+    font-family: Georgia, serif;
+    font-size: 24px;
+}
+
+.tutorial-item h3 {
+    margin: 0 0 10px;
+    font-family: Georgia, serif;
+    font-size: 22px;
+}
+
+.tutorial-item p,
+.tutorial-item li {
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.tutorial-item ol {
+    padding-left: 20px;
+}
+
+@media (max-width: 700px) {
+    .site-header {
+        min-height: 68px;
+        padding: 0 6%;
+    }
+
+    nav {
+        gap: 16px;
+    }
+
+    .intro {
+        min-height: 0;
+        padding: 70px 8% 54px;
+        background-position: right 6% top 20px;
+    }
+
+    .intro h1 {
+        font-size: 46px;
+    }
+
+    .tutorials {
+        padding: 54px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    .tutorial-grid {
+        grid-template-columns: 1fr;
+    }
+}
